@@ -74,4 +74,7 @@ RstatUs::Application.routes.draw do
   # Admin
   match '/admin', :to => "admin#update", :via => :put
   match '/admin', :to => "admin#index"
+
+  # Tweeted "piido" a.k.a. Tuit
+  resources :tuits, :only => [:index, :new, :create]
 end

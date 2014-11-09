@@ -2,7 +2,7 @@
 = form_tag '/tuits', :html => {:name => "tuit_form", :id => "tuit-form", :class => "update-form"} do |f|
   %h4 What's gone out?
   #tuit-content
-    %textarea#tuit-textarea{:name => "tuit"}=@tuit_text
+    %input#tuit-piido{:name => "piido"}=@tuit_piido
   #tuit-info
     %input#tuit-button.button{:type => "submit", :value => "Share"}
 

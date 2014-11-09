@@ -5,8 +5,8 @@ class Tuit
   require 'cgi'
   include MongoMapper::Document
 
-  key :text, String, :default => ""
-  validates_length_of :text, :minimum => 1, :maximum => 140
+  key :piido, String, :default => ""
+  validates_length_of :piido, :minimum => 1, :maximum => 140
 
   def to_indexed_json
     self.to_json

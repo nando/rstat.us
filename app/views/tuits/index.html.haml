@@ -2,8 +2,4 @@
 
 %h2 Vástag@s Cocktailer@s
 
-- content_for :top do
-  - unless current_user.nil?
-    != render :partial => "updates/form"
-
 != render :partial => "tuits/list", :locals => {:updates => @updates, :list_class => @list_class}

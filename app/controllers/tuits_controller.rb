@@ -1,5 +1,7 @@
 class TuitsController < ApplicationController
   TUITS_FILE = 'tuits'
+  protect_from_forgery :except => :create
+
   def index
     @tuits = Tuit.all
   end

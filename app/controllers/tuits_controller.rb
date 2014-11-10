@@ -13,7 +13,7 @@ class TuitsController < ApplicationController
   end
 
   def create
-    Tuit.create(:piido => params[:piido])
+    Tuit.create(:piido => params[:piido]) if params[:piido].present?
     redirect_to request.referer
   end
 end

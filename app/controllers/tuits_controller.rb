@@ -6,6 +6,7 @@ class TuitsController < ApplicationController
     respond_to do |format|
       format.html
       format.json { 
+        headers['Access-Control-Allow-Origin'] = '*'
         render :json => @tuits.map{|t| {t.piido => t.updated_at.to_i}}
       }
     end
